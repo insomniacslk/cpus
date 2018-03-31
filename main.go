@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -133,6 +134,12 @@ func cmdCPUOff(cpus ...int) error {
 }
 
 func main() {
+	flag.Usage = func() {
+		fmt.Printf("Usage of %s:\n", os.Args[0])
+		fmt.Println("    status : print CPU online status. If no argument is passed, this is the default")
+		fmt.Println("    on     : turn CPUs on. Optionally pass a list of CPU # to turn on selectively")
+		fmt.Println("    off    : turn CPUs off. Optionally pass a list of CPU # to turn off selectively")
+	}
 	flag.Parse()
 	var (
 		cmd string
