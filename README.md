@@ -33,3 +33,5 @@ CPU5 is online
 CPU6 is online
 CPU7 is online
 ```
+
+You'd better use Linux capabilities rather than running as root though.
