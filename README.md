@@ -35,3 +35,9 @@ CPU7 is online
 ```
 
 You'd better use Linux capabilities rather than running as root though.
+
+
+## TODO
+
+Implement a daemon mode that periodically changes the CPUs that are on and off
+to avoid loading always the same ones.
